@@ -13,35 +13,85 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
-    <a class="navbar-brand" href="#">Menú</a>
-    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Resumen</a>
-        </li>
-
-      </ul>
-
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
+          <a class="navbar-brand" href="#">Menú</a>
+          <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" onclick="advertensia()" href="#">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.sinburpeesenmiwod.com/crossfit-para-principiantes-empezar-paso-a-paso/">Otra Referencia</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-  </nav>
-  <div class="jumbotron text-center">
-    <h1>Crossfit e Ingnieros de Sistemas</h1>
-    <p>¡La combinación perfecta!</p>
-  </div>
-  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="jumbotron text-center">
+          <h1>Crossfit e Ingnieros de Sistemas</h1>
+          <p>¡La combinación perfecta!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Nav pills -->
+        <ul class="nav nav-pills" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#info">Información General</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#autor">Autor</a>
+          </li>
+         
+        </ul>
 
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="info" class="container tab-pane active"><br>
+            <h3>¿Qué es el Crossfit?</h3>
+            <p>Es una serie de movimientos funcionales ejecutados a alta intensidad.
+            </p>
+            <h3>¿Qué es un movimiento Funcional?</h3>
+            <p>Es el movimiento que implica dos o más articulaciones.
+            </p>
+          </div>
+          <div id="autor" class="container tab-pane fade"><br>
+            <h3>Jorge Emilio Murillo - 1093213</h3>
+            <p>Estudiante de la Universidad Rafael Landívar y pacticante del deporte.</p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <footer>
+                <p>Information:<strong></strong> <a href="https://www.crossfit.com/">crossfit.com</a></strong>.</p>
+              </footer>
 
+        </div>
+    </div>
   </div>
   <!-- Optional JavaScript -->
+  <script>
+   const advertensia = () => {
+    swal("Atención!", "Sitio aún en construcción!", "info")
+   }
+  </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/js/sweetalert.min.js"></script>
+  <script src="js/sweetalert"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
