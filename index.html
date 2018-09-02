@@ -47,24 +47,25 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="fila">
       <div class="col-md">
-        <button type="button" class="btn btn-outline-dark" onclick="SorpresaFuncional1()">Sorpresa No.1</button>
+        <button type="button" class="btn btn-outline-dark" id="bt1" onclick="SorpresaFuncional1()">Sorpresa No.1</button>
       </div>
       <div class="col-md">
-        <button type="button" class="btn btn-outline-secondary" onclick="SorpresaFuncional2()">Sorpresa No.2</button>
+        <button type="button" class="btn btn-outline-secondary" id="bt2" onclick="SorpresaFuncional2()">Sorpresa No.2</button>
       </div>
       <div class="col-md">
-        <button type="button" class="btn btn-outline-success">Sorpresa No.3</button>
+        <button type="button" class="btn btn-outline-success" id="bt3" onclick="SorpresaFuncional3()">Sorpresa No.3</button>
       </div>
       <div class="col-md">
-        <button type="button" class="btn btn-outline-warning">Sorpresa No.4</button>
+        <button type="button" class="btn btn-outline-warning" id="bt4">Sorpresa No.4</button>
       </div>
       <div class="col-md">
-        <button type="button" class="btn btn-outline-info">Sorpresa No.5</button>
+        <button type="button" class="btn btn-outline-info" id="bt5">Sorpresa No.5</button>
       </div>
 
     </div>
+    <br/>
     <div class="row" id="fila3">
       <div class="col-md-12">
         <!-- Nav pills -->
@@ -108,6 +109,7 @@
   <!-- Optional JavaScript -->
   <script>
     let micount;
+    let micount2;
     const advertensia = () => {
       swal("Atención!", "Sitio aún en construcción!", "info")
     }
@@ -143,6 +145,11 @@
       }
       micount = micount + 1
     }
+    const SorpresaFuncional3 = () => {
+        $('#fila1').append( $('#fila3'))
+        $('#fila2').append( $('#fila4'))
+    }
+    
   </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="/js/sweetalert.min.js"></script>
