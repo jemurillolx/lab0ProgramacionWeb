@@ -13,9 +13,10 @@
 </head>
 
 <body>
-  <div class="container" >
-    <div class="row">
-      <div class="col-lg-12">
+  <div class="container-fluid">
+
+    <div class="row" id="fila1">
+      <div class="col-md-12">
         <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
           <a class="navbar-brand" href="#">Menú</a>
           <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -28,16 +29,18 @@
                 <a class="nav-link" onclick="advertensia()" href="#">Inicio <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://www.sinburpeesenmiwod.com/crossfit-para-principiantes-empezar-paso-a-paso/">Otra Referencia</a>
+                <a class="nav-link" href="https://www.sinburpeesenmiwod.com/crossfit-para-principiantes-empezar-paso-a-paso/">Otra
+                  Referencia
+                </a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </div>
-   
-    <div class="row">
-      <div class="col-lg-12">
+
+    <div class="row" id="fila2">
+      <div class="col-md-12">
         <div class="jumbotron text-center">
           <h1>Crossfit e Ingnieros de Sistemas</h1>
           <p>¡La combinación perfecta!</p>
@@ -45,25 +48,25 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-dark">Sorpresa No.1</button>
-        </div>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-secondary">Sorpresa No.2</button>
-        </div>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-success">Sorpresa No.3</button>
-        </div>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-warning">Sorpresa No.4</button>
-        </div>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-outline-info">Sorpresa No.5</button>
-        </div>
-          
+      <div class="col-md">
+        <button type="button" class="btn btn-outline-dark" onclick="SorpresaFuncional1()">Sorpresa No.1</button>
+      </div>
+      <div class="col-md">
+        <button type="button" class="btn btn-outline-secondary" onclick="SorpresaFuncional2()">Sorpresa No.2</button>
+      </div>
+      <div class="col-md">
+        <button type="button" class="btn btn-outline-success">Sorpresa No.3</button>
+      </div>
+      <div class="col-md">
+        <button type="button" class="btn btn-outline-warning">Sorpresa No.4</button>
+      </div>
+      <div class="col-md">
+        <button type="button" class="btn btn-outline-info">Sorpresa No.5</button>
+      </div>
+
     </div>
-    <div class="row">
-      <div class="col-lg-12">
+    <div class="row" id="fila3">
+      <div class="col-md-12">
         <!-- Nav pills -->
         <ul class="nav nav-pills" role="tablist">
           <li class="nav-item">
@@ -72,7 +75,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="pill" href="#autor">Autor</a>
           </li>
-         
+
         </ul>
 
         <!-- Tab panes -->
@@ -89,28 +92,63 @@
             <h3>Jorge Emilio Murillo - 1093213</h3>
             <p>Estudiante de la Universidad Rafael Landívar y pacticante del deporte.</p>
           </div>
-        
+
         </div>
       </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <footer>
-                <p>Information:<strong></strong> <a href="https://www.crossfit.com/">crossfit.com</a></strong>.</p>
-              </footer>
+    <div class="row" id="fila4">
+      <div class="col-md-12">
+        <footer>
+          <p>Information:<strong></strong> <a href="https://www.crossfit.com/">crossfit.com</a></strong>.</p>
+        </footer>
 
-        </div>
+      </div>
     </div>
   </div>
   <!-- Optional JavaScript -->
   <script>
-   const advertensia = () => {
-    swal("Atención!", "Sitio aún en construcción!", "info")
-   }
+    let micount;
+    const advertensia = () => {
+      swal("Atención!", "Sitio aún en construcción!", "info")
+    }
+
+    const SorpresaFuncional1 = () => {
+      $('#fila1').toggle()
+      $('#fila2').toggle()
+      $('#fila3').toggle()
+      $('#fila4').toggle()
+    }
+    const SorpresaFuncional2 = () => {
+      if (micount == null) {
+        micount = 0
+      }
+      switch (micount) {
+        case 0:
+
+          document.body.style.backgroundColor = "red"
+          break;
+        case 1:
+
+          document.body.style.backgroundColor = "lightblue"
+          break;
+        case 2:
+
+          document.body.style.backgroundColor = "green"
+          break;
+        default:
+          document.body.style.backgroundColor = "#E6E6FA"
+          micount = 0
+          return
+          break;
+      }
+      micount = micount + 1
+    }
   </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="/js/sweetalert.min.js"></script>
   <script src="js/sweetalert"></script>
+  <script src="/js/jquery-3.3.1.js"></script>
+  <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
