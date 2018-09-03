@@ -58,10 +58,10 @@
         <button type="button" class="btn btn-outline-success" id="bt3" onclick="SorpresaFuncional3()">Sorpresa No.3</button>
       </div>
       <div class="col-md">
-        <button type="button" class="btn btn-outline-warning" id="bt4">Sorpresa No.4</button>
+        <button type="button" class="btn btn-outline-warning" id="bt4" onclick="SorpresaFuncional4()">Sorpresa No.4</button>
       </div>
       <div class="col-md">
-        <button type="button" class="btn btn-outline-info" id="bt5">Sorpresa No.5</button>
+        <button type="button" class="btn btn-outline-info" id="bt5" onclick="SorpresaFuncional5()">Sorpresa No.5</button>
       </div>
 
     </div>
@@ -82,12 +82,16 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div id="info" class="container tab-pane active"><br>
-            <h3>¿Qué es el Crossfit?</h3>
-            <p>Es una serie de movimientos funcionales ejecutados a alta intensidad.
-            </p>
-            <h3>¿Qué es un movimiento Funcional?</h3>
-            <p>Es el movimiento que implica dos o más articulaciones.
-            </p>
+            <div>
+              <h3>¿Qué es el Crossfit?</h3>
+              <p id="mip">Es una serie de movimientos funcionales ejecutados a alta intensidad.
+              </p>
+            </div>
+            <div>
+              <h3>¿Qué es un movimiento Funcional?</h3>
+              <p>Es el movimiento que implica dos o más articulaciones.
+              </p>
+            </div>
           </div>
           <div id="autor" class="container tab-pane fade"><br>
             <h3>Jorge Emilio Murillo - 1093213</h3>
@@ -110,6 +114,7 @@
   <script>
     let micount;
     let micount2;
+    let mc;
     const advertensia = () => {
       swal("Atención!", "Sitio aún en construcción!", "info")
     }
@@ -146,10 +151,53 @@
       micount = micount + 1
     }
     const SorpresaFuncional3 = () => {
-        $('#fila1').append( $('#fila3'))
-        $('#fila2').append( $('#fila4'))
+      $('#fila1').append($('#fila3'))
+      $('#fila2').append($('#fila4'))
     }
-    
+    const SorpresaFuncional4 = () => {
+      if (micount2 == null) {
+        micount2 = 0
+      }
+      switch (micount2) {
+        case 0:
+          $('#bt1').prop('class', 'btn btn-primary')
+          $('#bt2').prop('class', 'btn btn-primary')
+          $('#bt3').prop('class', 'btn btn-primary')
+          $('#bt4').prop('class', 'btn btn-primary')
+          $('#bt5').prop('class', 'btn btn-primary')
+          micount2 = micount2 + 1
+          break;
+        default:
+
+          $('#bt1').prop('class', 'btn btn-outline-dark')
+          $('#bt2').prop('class', 'btn btn-outline-secondary')
+          $('#bt3').prop('class', 'btn btn-outline-success')
+          $('#bt4').prop('class', 'btn btn-outline-warning')
+          $('#bt5').prop('class', 'btn btn-outline-info')
+          micount2 = 0
+          break;
+      }
+
+    }
+
+    const SorpresaFuncional5 = () => {
+      if (mc == null) {
+        mc = 0
+      }
+      switch (mc) {
+        case 0:
+          $('#info').prop('class', 'nav justify-content-rigth')
+          mc = mc + 1
+          break;
+
+        default:
+          $('#info').prop('class', 'container tab-pane active')
+          $('#autor').prop('class', 'container tab-pane fade')
+          mc = 0
+          break;
+      }
+
+    }
   </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="/js/sweetalert.min.js"></script>
